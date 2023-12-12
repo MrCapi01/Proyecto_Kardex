@@ -105,8 +105,8 @@
                                         <th><?php echo $row['id_estudiante'] ?></th>
                                         <td><?php echo $row['id_materia']?></td>
                                         <td><?php echo $row['fecha']?></td>
-                                        <td><input type="text" placeholder="<?php echo $row['calificacion']?>">
-                                            <button type="button" class="btn btn-outline-success">Agregar</button>
+                                        <td><input name='Calificacion' type="text" placeholder="<?php echo $row['calificacion']?>">
+                                            <button name='Guardar' type="button" class="btn btn-outline-success">Agregar</button>
                                         </td>
                                     </tr>
                                     
