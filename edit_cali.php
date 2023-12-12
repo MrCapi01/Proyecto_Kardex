@@ -10,11 +10,11 @@
         try{
 
             $id = $_GET['ID'];
-            $nombres = $_POST['Nombres'];
+            $calificaciones = $_POST['Calificacion'];
 
-            $sql = "UPDATE equipo SET nombre_Equipo = '$nombres' WHERE Id_Equipo = '$id' ";
+            $sql = "UPDATE notas_estudiantes_materias SET calificaion = '$calificaciones' WHERE Id_Equipo = '$id' ";
 
-            $_SESSION['message'] = ($db->exec($sql)) ? 'Equipo actualizado correctamente' : 'No se actualizo el nombre del equipo';
+            $_SESSION['message'] = ($db->exec($sql)) ? 'Calificación actualizada correctamente' : 'No se actualizo la calificación';
 
         }catch(PDOException $e){
             $_SESSION['message'] = $e->getMessage();
@@ -23,7 +23,7 @@
         $database->Close();
 
     }else{
-        $_SESSION['message'] = 'Ingresa el nombre';
+        $_SESSION['message'] = 'Ingresa la calificación';
     }
 
     header('location: admin.php');
